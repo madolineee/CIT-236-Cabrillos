@@ -1,0 +1,637 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800;900&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Global CSS rules for resetting and defining styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Root-level variables for colors and font sizes */
+:root {
+    --bg-color: #2a2a2a;
+    --second-bg-color: #202020;
+    --text-color: #fff;
+    --second-color: #ccc;
+    --main-color: #e964d1;
+    --big-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
+
+/* Body styles */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Changed from center to space-between */
+    background: transparent;
+    padding: 22px 15%;
+    border-bottom: 1px solid transparent;
+    transition: all .45s ease;
+}
+
+/* Logo styles */
+.logo {
+    /* Remove float and adjust dimensions as needed */
+    height: 80px;
+    width: auto;
+    padding: 1px 18px;
+}
+
+/* Navigation list styles */
+.navlist {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adjust the gap between navigation items */
+}
+
+.navlist li {
+    font-size: 18px; /* Set your font size */
+}
+
+/* Menu icon styles */
+.bx-menu {
+    font-size: 24px; /* Set your menu icon size */
+    cursor: pointer;
+}
+
+/* Span styles */
+span {
+    color: var(--main-color);
+}
+
+/* Navigation link styles */
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: var(--second-color);
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 25px;
+    transition: all .45s ease;
+}
+
+.navlist a:hover {
+    color: var(--main-color);
+}
+
+.navlist a.active {
+    color: var(--main-color);
+}
+
+/* Menu icon styles */
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    z-index: 1000;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+
+/* Section styles */
+section {
+    padding: 160px 15% 120px;
+}
+
+/* Home section styles */
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/first.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Home image styles */
+.home img {
+    float: right; /* Align the image to the right */
+    max-width: 65%; /* Adjust the maximum width as needed */
+    margin: 25px 0 20px 25px; /* Add margin for spacing */
+    border-radius: 8px; /* Add rounded corners if desired */
+}
+
+/* Slide styles */
+.slide {
+    margin-bottom: 20px;
+}
+
+/* One class styles */
+.one {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 0 15px;
+    line-height: 32px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+/* Two class styles */
+.two {
+    display: inline-block;
+    color: var(--second-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Home text styles */
+.home-text h1 {
+    font-size: var(--big-font);
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.1;
+    margin: 0 0 8px;
+}
+
+.home-text h3 {
+    color: var(--text-color);
+    margin: 0 0 35px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.home-text p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 12px;
+    background: var(--main-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: all .45s ease;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
+
+/* About section styles */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start; /* Align items to the top of the container */
+    gap: 1.5rem;
+    height: 880px; /* Set a fixed height to match the image height */
+    overflow: hidden; /* Hide overflow content if necessary */
+}
+
+/* About image styles */
+.about-img img {
+    max-width: 500px; /* Set maximum width to 500px to make the image fit */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+/* About text styles */
+.about-text {
+    text-align: left; /* Align the text to the left within the container */
+    margin: 100px; /* Center-align the container itself within its parent */
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+
+.about-text h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    margin-bottom: 4rem;
+}
+
+
+/* Services section styles */
+.services {
+    background: var(--second-bg-color);
+}
+
+/* Main text styles */
+.main-text {
+    text-align: center;
+}
+
+.main-text p {
+    color: var(--second-color);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.main-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+
+/* Services content styles */
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+/* Box styles */
+.box {
+    background: var(--bg-color);
+    padding: 35px 45px;
+    border-radius: 8px;
+}
+    
+/* Social Icons Styles */
+.s-icons i {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+    
+/* Box Styles */
+.box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+    
+.box p {
+    color: var(--second-color);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+    
+.box:hover {
+    transform: translateY(-8px);
+    cursor: pointer;
+}
+    
+    /* Portfolio Section Styles */
+    .porfolio {
+        background-color: #2a2a2a; /* Background color for the portfolio section */
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    /* Title Text Style */
+    .title-text h2 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color:#fff; /* Text color for the title */
+    }
+    
+    .title-text p {
+        font-size: 18px;
+        color: #fff; /* Text color for the description */
+    }
+    
+    /* Video Styles */
+    .vid video {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+    }
+    #portfolio .title-text p {
+        font-size: 24px;
+        color: #fff; /* Text color for the photography title */
+    }
+    
+    /* Common Styles for Photo Show */
+    .photo-show {
+        position: relative;
+        margin: 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        flex-basis: calc(20% - 20px); /* Five images per row */
+        max-width: calc(20% - 20px); /* Five images per row */
+        overflow: hidden; /* Hide overflow content */
+        border-radius: 8px;
+    }
+
+    .photo-show img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out; /* Add this line for smoother image scaling */
+    }
+
+    /* Overlay Styles */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: #e964d1(0, 0, 2, 0.5); /* Overlay background color and opacity */
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    /* Common Styles for Photo Show */
+    .photo-show {
+        position: relative;
+        margin: 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        flex-basis: calc(20% - 20px); /* Five images per row */
+        max-width: calc(20% - 20px); /* Five images per row */
+        overflow: hidden; /* Hide overflow content */
+        border-radius: 8px;
+        z-index: 1; /* Ensure the image boxes are on top of other content */
+    }
+
+    .photo-show img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out; /* Add this line for smoother image scaling */
+    }
+
+    /* Hover Effect - Show Overlay and Enlarge Photo Box */
+    .photo-show:hover .overlay {
+        opacity: 1;
+    }
+
+    .photo-show:hover {
+        transform: scale(3.1); /* Adjust the scale factor for the desired enlargement */
+        z-index: 2; /* Move the hovered image box to a higher z-index */
+    }
+
+    /* Click Effect - Enlarge Photo Box */
+    .photo-show.active {
+        transform: scale(3.2); /* Adjust the scale factor for the desired enlargement on click */
+        z-index: 3; /* Move the clicked image box to the highest z-index */
+    }
+
+    /* Photography Section Styles */
+    #projects {
+        margin-top: 60px;
+    }
+
+    #projects .title-text p {
+        font-size: 24px;
+        color: #fff; /* Text color for the photography title */
+    }
+
+    /* Photo Box Styles */
+    .photo-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    /* Contact Section Styles */
+    .contact {
+        background: var(--second-bg-color);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    .contact-text h4 {
+        color: var(--text-color);
+        margin: 18px 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .contact-text h2 {
+        font-size: var(--h2-font);
+        line-height: 1;
+    }
+    
+    .contact-text p {
+        color: var(--second-color);
+        font-size: var(--p-font);
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+    
+    .list {
+        margin-bottom: 2.8rem;
+    }
+    
+    .list li {
+        margin-bottom: 12px;
+    }
+    
+    .list li a {
+        display: block;
+        color: var(--second-color);
+        font-size: 14px;
+        transition: all .45s ease;
+    }
+    
+    .list li a:hover {
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+    
+    .contact-icons i {
+        height: 45px;
+        width: 45px;
+        color: var(--text-color);
+        font-size: 22px;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        margin-right: 15px;
+        transition: all .45s ease;
+    }
+    
+    .contact-icons i:hover {
+        color: var(--main-color);
+    }
+    
+    .contact-form form {
+        position: relative;
+    }
+    
+    .contact-form form input,
+    form textarea {
+        width: 100%;
+        padding: 14px;
+        background: var(--bg-color);
+        color: var(--text-color);
+        border: none;
+        outline: none;
+        font-size: 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .contact-form textarea {
+        resize: none;
+        height: 240px;
+    }
+    
+    .contact-form .submit {
+        display: inline-block;
+        font-size: 16px;
+        background: var(--main-color);
+        color: var(--text-color);
+        width: 160px;
+        transition: all .45s ease;
+    }
+    
+    .contact-form .submit:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    
+    /* End Section Styles */
+    .end {
+        padding: 20px 15%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        background: var(--bg-color);
+    }
+    
+    .last-text p {
+        color: var(--second-color);
+        font-size: 14px;
+    }
+    
+    .top i {
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 15px;
+        color: var(--text-color);
+        background: var(--main-color);
+    }
+    
+    /* Media Queries */
+    @media (max-width: 1480px) {
+        header {
+            padding: 12px 2.5%;
+            transition: .1s;
+        }
+    
+        section {
+            padding: 110px 3% 60px;
+        }
+    
+        .end {
+            padding: 15px 3%;
+        }
+    }
+    
+    @media (max-width: 1100px) {
+        :root {
+            --big-font: 4rem;
+            --h2-font: 2.5rem;
+            --p-font: 1rem;
+            transition: .1s;
+        }
+    
+        .home-text h3 {
+            font-size: 2.5rem;
+        }
+    
+        .home {
+            height: 87vh;
+        }
+    }
+    
+    @media (max-width: 920px) {
+        .about {
+            grid-template-columns: 1fr;
+        }
+    
+        .about-img img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+    
+        .contact {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        #menu-icon {
+            display: block;
+        }
+    
+        .navlist {
+            position: absolute;
+            top: -1000px;
+            right: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-color);
+            text-align: left;
+            transition: all .45s ease;
+        }
+    
+    .navlist a{
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+        color: var(--text-color);
+
+    }
+    .navlist a:hover{
+        color: var(--main-color);
+    }
+    navlist a.active{
+        color: var(--text-color);
+    }
+    .navlist.open{
+        top: 100%;
+    }
+}
